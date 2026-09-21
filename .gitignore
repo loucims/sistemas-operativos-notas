@@ -1,0 +1,8 @@
+# Layout de ventanas de Obsidian: cambia en cada redimensión, no aporta nada al historial.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# El resto de .obsidian/ (plugins, apariencia, hotkeys) sí conviene versionarlo.
+
+.trash/
+.DS_Store
