@@ -5,11 +5,11 @@ los conceptos se apilan: casi nada se entiende aislado. El trabajo es
 **concepto por concepto**, y el valor está en las relaciones entre ellos, no en
 el volumen de notas.
 
-Todo se escribe en **español**, incluidos títulos, secciones y frontmatter. Los
-términos técnicos van en español cuando existe la forma usual en la materia
-(*hilo*, *planificador*, *interbloqueo*); si el término solo circula en inglés
-(*thrashing*, *spinlock*), se deja en inglés y se aclara la traducción la primera
-vez.
+Todo se escribe en **español** (cuerpo de las notas, secciones y frontmatter),
+**salvo los nombres de los conceptos**: van en **inglés** siempre que se pueda
+(*Kernel*, *System call*, *Context switch*). Al proponer una nota nueva, Claude
+propone el nombre en inglés. Algunas notas el usuario las nombra en español a
+propósito: respetar el nombre que él le dé y no renombrar lo existente sin preguntar.
 
 ## Estructura
 
@@ -30,8 +30,7 @@ vive igual en `conceptos/` y se enlaza desde todos los mapas que lo usen.
 ## Convenciones
 
 - **Nombres de archivo**: título con espacios y mayúscula inicial, tal como se
-  nombra el concepto al hablar — `Cambio de contexto.md`, `Algoritmo del
-  banquero.md`. Mapas: `Unidad 4 - Memoria.md`. Sin acortar ni abreviar: el
+  nombra el concepto al hablar — `Context switch.md`, `Banker's algorithm.md`. Mapas: `Unidad 4 - Memoria.md`. Sin acortar ni abreviar: el
   nombre del archivo es el texto del enlace.
 - **Singular**: `Semáforo.md`, no `Semáforos.md`. Excepto cuando el concepto es
   inherentemente plural (`Estados de un proceso`).
@@ -73,26 +72,18 @@ tags: [procesos, cpu]
 
 ## Anatomía de una nota de concepto
 
-El orden de las secciones no es decorativo — va de "qué es" a "cómo se conecta".
-Usar `plantillas/Plantilla concepto.md`. Secciones, en este orden:
+Estilo **minimalista**: la nota es texto libre, escrito por el usuario con sus
+palabras. No se fuerza la estructura de secciones. Usar
+`plantillas/Plantilla concepto.md`, que tiene solo:
 
-1. **Definición** — una o dos oraciones. Si no entra en dos, son dos conceptos:
-   separarlos.
-2. **Qué problema resuelve** — por qué existe, qué se rompe sin esto. En esta
-   materia casi todo concepto es la respuesta a una limitación concreta del
-   hardware o a un problema de diseño; si esa sección queda vacía, la nota no
-   está entendida.
-3. **Cómo funciona** — el mecanismo: pasos, estructuras de datos, quién lo dispara.
-4. **Se apoya en** / **Habilita** — en prosa, con una línea de por qué, no solo el
-   enlace pelado. Deben coincidir con `requiere:` / `habilita:`.
-5. **Se confunde con** — el concepto vecino y la diferencia exacta. Sección clave
-   acá: *proceso vs hilo*, *paginación vs segmentación*, *interbloqueo vs
-   inanición*, *concurrencia vs paralelismo*, *cambio de contexto vs cambio de modo*.
-6. **Preguntas de autoevaluación** — 2 a 4, como checkboxes.
-7. **Fuentes** — enlace a la nota de `referencias/` + capítulo y página.
+1. **Frontmatter** completo (ver arriba) — es lo que sostiene el grafo.
+2. **Cuerpo libre** — qué problema resuelve, cómo funciona, con qué se confunde,
+   en el orden y formato que el usuario quiera. Encabezados chicos (`####`)
+   para destacar una idea, por ejemplo `#### OS != [[Kernel]]`.
+3. **Fuentes** — enlace a la nota de `referencias/` + capítulo/slide y página.
 
-Secciones opcionales cuando aportan: un ejemplo concreto, una comparación de
-algoritmos en tabla, un diagrama.
+Al revisar una nota, chequear igual que se entienda qué problema resuelve el
+concepto y con qué se confunde; si falta, sugerirlo, no agregarlo solo.
 
 Cerrar toda nota de concepto con `Volver a [[Unidad N - Nombre]]`.
 
@@ -114,5 +105,6 @@ Cerrar toda nota de concepto con `Volver a [[Unidad N - Nombre]]`.
   el cuerpo de un concepto.
 - **No reorganizar** carpetas ni renombrar en masa sin preguntar. Renombrar una
   nota rompe enlaces entrantes: si se hace, actualizarlos todos en la misma pasada.
-- **No editar `.obsidian/`.**
+- **No editar `.obsidian/`** salvo que el usuario lo pida. Las notas nuevas se
+  crean en `conceptos/` (configurado en `app.json`).
 - No hay daily notes.

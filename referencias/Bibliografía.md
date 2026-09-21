@@ -22,6 +22,6 @@ página en su sección **Fuentes**.
 
 ## Clases y otros
 
-- *(pendiente)*
+- [[U1 - Introducción]] — slides de la clase 1
 
 Volver a [[Inicio]].

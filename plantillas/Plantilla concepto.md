@@ -9,37 +9,10 @@ creado:
 tags: []
 ---
 
-# 
 
-## Definición
 
-> Una o dos oraciones. Si no entra en dos oraciones, probablemente sean dos conceptos.
+#### Fuentes
 
-## Qué problema resuelve
+- [[ ]], slide/cap. X, p. Y
 
-Por qué existe esto. Qué pasaba antes / qué se rompe si no está.
-
-## Cómo funciona
-
-El mecanismo. Pasos, estructuras de datos involucradas, quién lo dispara.
-
-## Se apoya en
-
-- [[ ]] — 
-
-## Habilita
-
-- [[ ]] — 
-
-## Se confunde con
-
-- [[ ]] — la diferencia es que...
-
-## Preguntas de autoevaluación
-
-- [ ] 
-- [ ] 
-
-## Fuentes
-
-- [[ ]], cap. X, p. Y
+Volver a [[ ]]
