@@ -15,6 +15,7 @@ qué se apoya en qué. Las carpetas casi no organizan nada: lo hacen los enlaces
 
 - [[Unidad 1 - Introducción]]
 - [[Unidad 2 - Procesos]]
+- [[Unidad 3 - Recursos y bloqueos]]
 
 *(Un mapa por unidad del programa, a medida que se avanza.)*
 

@@ -4,7 +4,7 @@ tipo: concepto
 unidad: 1 - Introducción
 estado: sin-empezar
 requiere: ["[[RAM]]", "[[Arithmethic Logic Unit]]"]
-habilita: ["[[Kernel]]", "[[Interrupción]]", "[[Modo kernel y modo usuario]]", "[[Cambio de contexto]]"]
+habilita: ["[[Kernel]]", "[[Interrupt]]", "[[Dual-mode operation]]", "[[Cambio de contexto]]"]
 creado: 2026-09-22
 tags: [cpu]
 ---
@@ -30,7 +30,6 @@ Contiene piezas
 
 - **Clock**: Un pulso periodico que marca el ritmo de velocidad del CPU, cada paso ocurren en un tick
 
-- **Mode Bit:** Un bit de estado del CPU, y es lo importante al OS, la CPU sabe en que modo esta, y segun eso deja o no ejecutar instrucciones privilegiadas.
+- **Mode Bit:** Un bit de estado del CPU, y es lo importante al OS, la CPU sabe en que modo esta, y segun eso deja o no ejecutar instrucciones privilegiadas. Es lo que permite el [[Dual-mode operation]]
 ##### **El ciclo** (lo unico que hace la CPU, para siempre, mientras tenga corriente):
 ![[CPU 2026-09-22 00.00.10.excalidraw|900]]
-

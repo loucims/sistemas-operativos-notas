@@ -3,8 +3,8 @@ titulo: Cambio de contexto
 tipo: concepto
 unidad: 2 - Procesos
 estado: en-progreso
-requiere: ["[[PCB]]", "[[Interrupción]]", "[[Modo kernel y modo usuario]]"]
-habilita: ["[[Planificador]]", "[[Multiprogramación]]"]
+requiere: ["[[Process Control Block]]", "[[Interrupt]]", "[[Dual-mode operation]]"]
+habilita: ["[[Scheduler]]", "[[Multiprogramming]]"]
 creado: 2026-09-21
 tags: [procesos, cpu]
 ---
@@ -27,12 +27,12 @@ reversible desde el punto de vista del proceso.
 
 ## Cómo funciona
 
-1. Llega una [[Interrupción]] (de reloj, de E/S) o el proceso hace una llamada al
+1. Llega una [[Interrupt]] (de reloj, de E/S) o el proceso hace una llamada al
    sistema. La CPU pasa a modo kernel.
-2. El SO guarda el contexto del proceso saliente en su [[PCB]]: registros de
+2. El SO guarda el contexto del proceso saliente en su [[Process Control Block]]: registros de
    propósito general, program counter, stack pointer, flags, puntero a tablas de
    memoria.
-3. El [[Planificador]] elige el siguiente proceso de la cola de listos.
+3. El [[Scheduler]] elige el siguiente proceso de la cola de listos.
 4. El SO carga el contexto del entrante desde su PCB y actualiza lo que dependa
    del proceso (registro de tabla de páginas, y con eso se invalida parte de la
    [[TLB]]).
@@ -48,14 +48,14 @@ quantum demasiado chico degrada el rendimiento aunque mejore la latencia.
 
 ## Se apoya en
 
-- [[PCB]] — es el lugar donde se guarda el contexto
-- [[Interrupción]] — el disparador más común
-- [[Modo kernel y modo usuario]] — guardar el contexto requiere privilegios
+- [[Process Control Block]] — es el lugar donde se guarda el contexto
+- [[Interrupt]] — el disparador más común
+- [[Dual-mode operation]] — guardar el contexto requiere privilegios
 
 ## Habilita
 
-- [[Planificador]] — sin poder cambiar de contexto, planificar no significa nada
-- [[Multiprogramación]] — la ilusión de paralelismo sobre una sola CPU
+- [[Scheduler]] — sin poder cambiar de contexto, planificar no significa nada
+- [[Multiprogramming]] — la ilusión de paralelismo sobre una sola CPU
 
 ## Se confunde con
 
