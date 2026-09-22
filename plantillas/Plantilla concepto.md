@@ -11,8 +11,4 @@ tags: []
 
 
 
-#### Fuentes
-
-- [[ ]], slide/cap. X, p. Y
-
 Volver a [[ ]]

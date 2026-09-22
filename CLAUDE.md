@@ -74,13 +74,13 @@ tags: [procesos, cpu]
 
 Estilo **minimalista**: la nota es texto libre, escrito por el usuario con sus
 palabras. No se fuerza la estructura de secciones. Usar
-`plantillas/Plantilla concepto.md`, que tiene solo:
+`plantillas/Plantilla concepto.md`, que tiene solo lo siguiente (las notas de
+concepto **no llevan sección de Fuentes**):
 
 1. **Frontmatter** completo (ver arriba) — es lo que sostiene el grafo.
 2. **Cuerpo libre** — qué problema resuelve, cómo funciona, con qué se confunde,
    en el orden y formato que el usuario quiera. Encabezados chicos (`####`)
    para destacar una idea, por ejemplo `#### OS != [[Kernel]]`.
-3. **Fuentes** — enlace a la nota de `referencias/` + capítulo/slide y página.
 
 Al revisar una nota, chequear igual que se entienda qué problema resuelve el
 concepto y con qué se confunde; si falta, sugerirlo, no agregarlo solo.

@@ -18,17 +18,20 @@ sistema como única puerta de entrada al kernel.
 ## Conceptos en orden de dependencia
 
 1. [[Sistema Operativo]] — extended machine + resource manager
-2. [[Kernel]] — la parte privilegiada y siempre residente del SO
-3. [[System Programs]] — lo que viene con el SO pero no es kernel
-4. [[Interrupción]] — cómo el hardware y los programas le devuelven el control al kernel
-5. [[Modo kernel y modo usuario]] — dual-mode operation: el bit que separa privilegios
-6. [[Timer]] — garantiza que el kernel recupere la CPU
-7. [[System Calls]] — la interfaz entre procesos y kernel
-8. [[Multiprogramación]] — tener siempre algo para ejecutar
-9. [[Multitasking]] — time sharing: alternar rápido para que parezca simultáneo
-10. [[Shell]] — el intérprete de comandos, un programa más
-11. [[Bootstrap]] — cómo arranca la máquina y se carga el kernel
-12. [[Virtual machine]] — emular una máquina entera
+2. [[RAM]] — array de bytes con address: donde viven instrucciones y datos
+3. [[Arithmethic Logic Unit]] — el circuito que hace cuentas y comparaciones
+4. [[CPU]] — registers + ALU + control unit + clock; el ciclo fetch/decode/execute
+5. [[Kernel]] — la parte privilegiada y siempre residente del SO
+6. [[System Programs]] — lo que viene con el SO pero no es kernel
+7. [[Interrupción]] — cómo el hardware y los programas le devuelven el control al kernel
+8. [[Modo kernel y modo usuario]] — dual-mode operation: el bit que separa privilegios
+9. [[Timer]] — garantiza que el kernel recupere la CPU
+10. [[System Calls]] — la interfaz entre procesos y kernel
+11. [[Multiprogramación]] — tener siempre algo para ejecutar
+12. [[Multitasking]] — time sharing: alternar rápido para que parezca simultáneo
+13. [[Shell]] — el intérprete de comandos, un programa más
+14. [[Bootstrap]] — cómo arranca la máquina y se carga el kernel
+15. [[Virtual machine]] — emular una máquina entera
 
 ## Conexiones con otras unidades
 
