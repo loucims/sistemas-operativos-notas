@@ -1,3 +1,9 @@
+---
+requiere:
+  - "[[Dual-mode operation]]"
+  - "[[CPU]]"
+habilita:
+---
 Al hacer el loop infinito de fetch -> decode -> execute del CPU, trae dos problemas
 
 1. Los dispositivos *terminan su trabajo cuando quieren* (el disco termina de leer, llega un paquete de red, apretas una tecla, etc). Por lo tanto la CPU se tiene que enterar de alguna manera. (Se podrian hacer awaits o whiles con mas ciclos del CPU, eso se llama **polling**, pero es ineficiente)

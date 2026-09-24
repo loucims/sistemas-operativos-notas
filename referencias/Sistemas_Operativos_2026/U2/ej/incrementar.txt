@@ -1,0 +1,11 @@
+Ejemplo de código en C++
+
+Este es un ejemplo utilizando C++ moderno (C++11 en adelante). Esta es la forma estándar, limpia y segura de manejar la sincronización sin depender de las debilidades del hardware actual.Utilizaremos std::atomic, que implementa internamente instrucciones atómicas y aplica barreras de memoria de forma automática.
+
+¿Por qué este código sí funciona en hardware moderno?
+
+test_and_set es atómica: A nivel de procesador, esto se traduce en una sola instrucción indivisible (como LOCK BTS en arquitectura x86). Ningún hilo puede meterse a la mitad de la lectura y la escritura.
+
+std::memory_order_acquire: Es la barrera de entrada. Le dice al procesador: "No adelantes ninguna lectura o escritura que esté dentro de la zona crítica antes de haber obtenido el candado".
+
+std::memory_order_release: Es la barrera de salida. Le dice al procesador: "Asegúrate de que todos los cambios que hice en la zona crítica impacten en la memoria común antes de que los demás vean que el candado está libre".

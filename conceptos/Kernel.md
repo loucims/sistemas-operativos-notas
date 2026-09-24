@@ -6,6 +6,7 @@ estado: sin-empezar
 requiere:
   - "[[Sistema Operativo]]"
   - "[[CPU]]"
+  - "[[Bootstrap]]"
 habilita:
   - "[[System Calls]]"
   - "[[Dual-mode operation]]"
