@@ -34,9 +34,13 @@ vive igual en `conceptos/` y se enlaza desde todos los mapas que lo usen.
   nombre del archivo es el texto del enlace.
 - **Singular**: `Semáforo.md`, no `Semáforos.md`. Excepto cuando el concepto es
   inherentemente plural (`Estados de un proceso`).
-- **Enlaces**: `[[wikilinks]]` por título. Enlazar generosamente — un concepto
-  sin enlaces entrantes ni salientes es una nota fallada. Un enlace a una nota
-  que todavía no existe está perfecto: marca lo próximo a escribir.
+- **Enlaces**: los enlaces reales entre notas van **solo** en las propiedades
+  `requiere:` y `habilita:` — son las que arman el grafo. En el cuerpo de una
+  nota, para nombrar otro concepto se usa la inline query de Dataview
+  `` `=[[Nota]]` ``, que se ve como link pero no crea un enlace en el grafo.
+  Nunca poner `[[Nota]]` suelto en el cuerpo. Un concepto sin `requiere:` ni
+  `habilita:` es una nota fallada. Un enlace a una nota que todavía no existe está
+  perfecto: marca lo próximo a escribir.
 - **Tags**: kebab-case, máximo 3 por nota, por tema transversal
   (`procesos`, `memoria`, `concurrencia`, `cpu`, `e-s`, `sistemas-de-archivos`).
   No taguear por unidad — eso ya está en el campo `unidad`.
@@ -74,7 +78,7 @@ tags: [procesos, cpu]
 
 Estilo **minimalista**: la nota es texto libre, escrito por el usuario con sus
 palabras. No se fuerza la estructura de secciones. Usar
-`plantillas/Plantilla concepto.md`, que tiene solo lo siguiente (las notas de
+`plantillas/Plantilla concepto.md` (o `plantillas/Plantilla relaciones.md` si solo hacen falta `requiere`, `habilita` y `creado`), que tiene solo lo siguiente (las notas de
 concepto **no llevan sección de Fuentes**):
 
 1. **Frontmatter** completo (ver arriba) — es lo que sostiene el grafo.
@@ -85,7 +89,7 @@ concepto **no llevan sección de Fuentes**):
 Al revisar una nota, chequear igual que se entienda qué problema resuelve el
 concepto y con qué se confunde; si falta, sugerirlo, no agregarlo solo.
 
-Cerrar toda nota de concepto con `Volver a [[Unidad N - Nombre]]`.
+Cerrar toda nota de concepto con `Volver a` + `` `=[[Unidad N - Nombre]]` ``.
 
 ## Trabajando en este vault
 
