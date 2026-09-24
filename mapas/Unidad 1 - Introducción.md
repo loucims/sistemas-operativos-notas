@@ -31,6 +31,7 @@ sistema como única puerta de entrada al kernel.
 7. [[Dual-mode operation]] ⭐ — el mode bit y las instrucciones privilegiadas
 8. [[Interrupt]] ⭐ — el hardware le avisa a la CPU; se atiende en cualquier modo y pasa a kernel
 9. [[Trap]] ⭐ — interrupción provocada por el programa (syscall, exception); diferencia con un call a subrutina
+   - [[Exception]] — el trap no intencional: error de la instrucción, casi siempre mata al proceso
 10. [[Interrupt vector table]] ⭐ — por qué los traps se identifican con un número y no con una dirección
 11. [[Kernel stack]] ⭐ — por qué el kernel no usa la stack del proceso interrumpido
 12. [[Timer]] — garantiza que el kernel recupere la CPU
