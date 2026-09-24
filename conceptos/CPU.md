@@ -9,16 +9,16 @@ creado: 2026-09-22
 tags: [cpu]
 ---
 
-La [[RAM]] guarda datos e instrucciones, pero no hace nada, es un deposito. Hace falta algo que tome instrucciones de a una y las ejecute (sumar, comparar, leer o escribir memoria, saltar). Y eso es la CPU. Todo lo que hace el [[Sistema Operativo]] termina siendo instrucciones que la CPU ejecuta
+La `=[[RAM]]` guarda datos e instrucciones, pero no hace nada, es un deposito. Hace falta algo que tome instrucciones de a una y las ejecute (sumar, comparar, leer o escribir memoria, saltar). Y eso es la CPU. Todo lo que hace el `=[[Sistema Operativo]]` termina siendo instrucciones que la CPU ejecuta
 
 **Como funciona**
 Contiene piezas
 
 - **Registers:** Son variables dentro de la CPU implementadas con flip-flops, tan rapidas que se pueden leer y writear en un solo cyclo de clock.
 	- **Program Counter (PC):** Contiene la direccion de memoria de la proxima instruccion
-	- **Stack Pointer:** Contiene la direccion del tope del [[Stack]] en memoria
+	- **Stack Pointer:** Contiene la direccion del tope del `=[[Stack]]` en memoria
 	- **Instruction Register:** Contiene la instruccion actual que esta decodeando y ejecutando la CPU
-	- **Accumulator (ACC):** Contiene los resultados inmediatos de las operaciones aritmeticas y logicas de la ALU ([[Arithmethic Logic Unit]]) (Hoy en dia ya no existen, se usa el GPR que elijas)
+	- **Accumulator (ACC):** Contiene los resultados inmediatos de las operaciones aritmeticas y logicas de la ALU (`=[[Arithmethic Logic Unit]]`) (Hoy en dia ya no existen, se usa el GPR que elijas)
 	- **General-Purpose Registers (GPRs):** Datos de trabajo flexibles para programadores, pueden contener adresses o data.
 	- **Flag Registers:** Contiene informacion sobre el resultado de la ultima operacion, lo usa todo el mundo. (Zero, carry, sign, overflow) 
 	- **Control Registers:** Contiene informacion que configura la CPU. **Solo se tocan en modo privilegiado**
@@ -30,6 +30,14 @@ Contiene piezas
 
 - **Clock**: Un pulso periodico que marca el ritmo de velocidad del CPU, cada paso ocurren en un tick
 
-- **Mode Bit:** Un bit de estado del CPU, y es lo importante al OS, la CPU sabe en que modo esta, y segun eso deja o no ejecutar instrucciones privilegiadas. Es lo que permite el [[Dual-mode operation]]
+- **Mode Bit:** Un bit de estado del CPU, y es lo importante al OS, la CPU sabe en que modo esta, y segun eso deja o no ejecutar instrucciones privilegiadas. Es lo que permite el `=[[Dual-mode operation]]`
 ##### **El ciclo** (lo unico que hace la CPU, para siempre, mientras tenga corriente):
 ![[CPU 2026-09-22 00.00.10.excalidraw|900]]
+La CPU hace este loop infinito de fetch -> decode -> execute sobre las instrucciones del programa que estan corriendo, pero *si nadie lo parara no funcionaria correctamente*, y no habria manera de darle control al Kernel por ejemplo.
+
+Para esto existen los siguientes mecanismos
+- El mecanismo de `=[[Interrupt]]` para manejar el caso *en dispositivos externos* que necesiten atencion (Despues de leer del disco, un teclado, etc). Es un mecanismo *asincronico*.
+
+- El mecanismo de `=[[Trap]]` para manejar el caso de *el propio programa que esta corriendo necesita al kernel*. Es un mecanismo *sincronico*.
+
+- Y el mecanismo de `=[[Exception]]` para manejar el caso de cuando el programa divide por cero o *ejecuta una instruccion privilegiada estando en user mode*.  Es un mecanismo *sincronico*.

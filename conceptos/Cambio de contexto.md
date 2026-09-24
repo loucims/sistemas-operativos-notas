@@ -27,15 +27,15 @@ reversible desde el punto de vista del proceso.
 
 ## Cómo funciona
 
-1. Llega una [[Interrupt]] (de reloj, de E/S) o el proceso hace una llamada al
+1. Llega una `=[[Interrupt]]` (de reloj, de E/S) o el proceso hace una llamada al
    sistema. La CPU pasa a modo kernel.
-2. El SO guarda el contexto del proceso saliente en su [[Process Control Block]]: registros de
+2. El SO guarda el contexto del proceso saliente en su `=[[Process Control Block]]`: registros de
    propósito general, program counter, stack pointer, flags, puntero a tablas de
    memoria.
-3. El [[Scheduler]] elige el siguiente proceso de la cola de listos.
+3. El `=[[Scheduler]]` elige el siguiente proceso de la cola de listos.
 4. El SO carga el contexto del entrante desde su PCB y actualiza lo que dependa
    del proceso (registro de tabla de páginas, y con eso se invalida parte de la
-   [[TLB]]).
+   `=[[TLB]]`).
 5. Se vuelve a modo usuario y la ejecución sigue en la instrucción donde el
    entrante había quedado.
 
@@ -48,14 +48,14 @@ quantum demasiado chico degrada el rendimiento aunque mejore la latencia.
 
 ## Se apoya en
 
-- [[Process Control Block]] — es el lugar donde se guarda el contexto
-- [[Interrupt]] — el disparador más común
-- [[Dual-mode operation]] — guardar el contexto requiere privilegios
+- `=[[Process Control Block]]` — es el lugar donde se guarda el contexto
+- `=[[Interrupt]]` — el disparador más común
+- `=[[Dual-mode operation]]` — guardar el contexto requiere privilegios
 
 ## Habilita
 
-- [[Scheduler]] — sin poder cambiar de contexto, planificar no significa nada
-- [[Multiprogramming]] — la ilusión de paralelismo sobre una sola CPU
+- `=[[Scheduler]]` — sin poder cambiar de contexto, planificar no significa nada
+- `=[[Multiprogramming]]` — la ilusión de paralelismo sobre una sola CPU
 
 ## Se confunde con
 
@@ -76,4 +76,4 @@ quantum demasiado chico degrada el rendimiento aunque mejore la latencia.
 
 - *(pendiente)*
 
-Volver a [[Unidad 2 - Procesos]].
+Volver a `=[[Unidad 2 - Procesos]]`.
