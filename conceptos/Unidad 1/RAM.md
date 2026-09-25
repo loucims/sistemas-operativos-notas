@@ -4,9 +4,12 @@ tipo: concepto
 unidad: 1 - Introducción
 estado: sin-empezar
 requiere: []
-habilita: ["[[CPU]]"]
+habilita:
+  - "[[CPU]]"
+  - "[[Stack]]"
 creado: 2026-09-22
-tags: [memoria]
+tags:
+  - memoria
 ---
 
 La RAM (Random Access Memory) es un array gigante de bytes

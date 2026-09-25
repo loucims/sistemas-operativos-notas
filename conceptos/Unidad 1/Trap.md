@@ -1,3 +1,11 @@
+---
+requiere:
+  - "[[Dual-mode operation]]"
+habilita:
+  - "[[Exception]]"
+  - "[[System Calls]]"
+creado: 2026-09-24
+---
 Hay dos situaciones donde el que necesita al kernel es el propio programa que esta corriendo:
 
 1. **Lo necesita a proposito**. Quiere leer un archivo, pero en user mode no puede tocar el disco (`=[[Dual-mode operation]]`). Tiene que haber una manera de delegar a que el kernel lo haga.
@@ -18,7 +26,7 @@ Usa **el mismo mecanismo que un interrupt**. Lo único que cambia es quién lo d
 Instruccion actual -> La CPU detecta "trap" entonces:
 - Se guarda el PC (donde estaba el programa)
 - mode bit -> kernel
-- numero del trap -> *vector table* -> direccion del handler
+- numero del trap -> `=[[Interrupt vector table]]` -> direccion del handler
 - salta al handler del kernel
 - handler hace lo que corresponde
 - Instruccion de retorno: restaura el PC y mode bit -> user (o no vuelve nunca si mato al proceso)

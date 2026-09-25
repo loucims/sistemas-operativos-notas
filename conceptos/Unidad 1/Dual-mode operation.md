@@ -5,6 +5,8 @@ habilita:
   - "[[Exception]]"
 requiere:
   - "[[Kernel]]"
+  - "[[CPU]]"
+  - "[[Timer]]"
 ---
 Como el kernel y los programas corren *sobre la misma CPU*, ejecutan instrucciones del mismo repertorio. 
 Entonces, para impedir que un programa ejecute instrucciones las cuales harian bypass de toda la seguridad del *OS*, existe la proteccion del **bit de modo del CPU,** implementada en *hardware* 

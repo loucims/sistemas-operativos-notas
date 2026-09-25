@@ -3,6 +3,7 @@ requiere:
   - "[[Dual-mode operation]]"
   - "[[CPU]]"
 habilita:
+  - "[[Interrupt vector table]]"
 ---
 Al hacer el loop infinito de fetch -> decode -> execute del CPU, trae dos problemas
 

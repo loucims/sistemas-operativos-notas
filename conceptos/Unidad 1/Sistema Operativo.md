@@ -3,7 +3,7 @@ titulo: Sistema Operativo
 tipo: concepto
 unidad: 1 - Introducción
 estado: sin-empezar
-requiere: []
+requiere:
 habilita:
   - "[[Kernel]]"
   - "[[System Programs]]"
@@ -15,7 +15,7 @@ Sin un OS, un programa tendria que:
 - Autogestionar su uso de la memoria y en que parte de la RAM vive
 - y confiar en que ningun otro programa le pise la memoria ni se quede con la CPU para siempre
 
-Es una capa de **abstraccion** la cual actua de intermediario entre el hardware y los aplicaciones
+Es una capa de **abstraccion** la cual actua de intermediario entre el hardware y las aplicaciones
 sus dos roles son el de
 
 **Extended Machine:** Esconde el hardware detras de abstracciones limpias, por ejemplo un file en vez de sectores de disco, un process en vez de registros sueltos. Gracias a esto los sistemas son **portables**, un IDE o Photoshop no necesita saber que disco usas.

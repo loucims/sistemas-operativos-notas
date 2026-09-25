@@ -10,6 +10,7 @@ requiere:
 habilita:
   - "[[System Calls]]"
   - "[[Dual-mode operation]]"
+  - "[[Kernel stack]]"
 creado: 2026-09-22
 tags: []
 ---

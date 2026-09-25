@@ -39,13 +39,13 @@ sistema como única puerta de entrada al kernel.
 
 #### Aprovechar la CPU
 14. [[Multiprogramming]] ⭐ — tener varios programas en memoria para no dejar la CPU ociosa
-15. [[Multitasking]] — time sharing: alternar rápido para que parezca simultáneo
+15. [[Multitasking (time sharing)]] — time sharing: alternar rápido para que parezca simultáneo
 
 #### Resto de la unidad
 16. [[Shell]] — el intérprete de comandos, un programa más
 17. [[Bootstrap]] — cómo arranca la máquina y se carga el kernel
-18. [[Linker and loader]] — de código fuente a programa cargado en memoria
-19. [[Virtual machine]] — emular una máquina entera
+18. [[Linker and Loader]] — de código fuente a programa cargado en memoria
+19. [[Virtual Machine]] — emular una máquina entera
 
 ## Conexiones con otras unidades
 
