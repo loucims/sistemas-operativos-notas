@@ -2,5 +2,8 @@
   "cssTheme": "AnuPpuccin",
   "theme": "obsidian",
   "accentColor": "#4c00ff",
-  "translucency": false
+  "translucency": false,
+  "enabledCssSnippets": [
+    "hide-table-blank-lines"
+  ]
 }
