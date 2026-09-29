@@ -4,6 +4,7 @@ requiere:
   - "[[CPU]]"
 habilita:
   - "[[Interrupt vector table]]"
+  - "[[Timer]]"
 ---
 Al hacer el loop infinito de fetch -> decode -> execute del CPU, trae dos problemas
 
@@ -13,9 +14,12 @@ Al hacer el loop infinito de fetch -> decode -> execute del CPU, trae dos proble
 Entonces el mecanismo que existe dentro del loop del CPU, es el **interrupt**, el cual es manejado por el **Interrupt Controller**.  Se mandan **IRQ** (Interrupt Request) a este y luego se le comunica al CPU que hay algo que hacer en las interrupciones. (*La interrupcion mas comun es el clock del sistema*)
 ![[Interrupt 2026-09-23 18.54.45.excalidraw]]
 1. El disco termina y activa su linea hacia el controller
+
 2. El controller activa el unico cable INT hacia la CPU, el bit de interrupcion
+
 3. Al terminar su instruccion actual, chequea el cable y ve el 1, y le pregunta al controller quien fue. El controller le pasa un *numero*, el *vector*
-4. La CPU usa ese numero como *indice* en la `=[[Interrupt Vector Table]]`, una tabla que armo el Kernel al arrancar, donde cada posicion tiene la direccion de un *handler*.
+
+4. La CPU usa ese numero como *indice* en la `=[[Interrupt Vector Table]]`, una tabla que armo el Kernel al arrancar, donde cada posicion tiene la direccion de un *handler*
 ```
    vector 0  → handler de "división por cero"
    ...

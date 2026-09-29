@@ -1,6 +1,7 @@
 ---
 requiere:
   - "[[CPU]]"
+  - "[[Interrupt]]"
 habilita:
   - "[[Dual-mode operation]]"
   - "[[Kernel]]"

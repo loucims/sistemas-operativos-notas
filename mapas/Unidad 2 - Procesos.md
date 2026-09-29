@@ -21,15 +21,15 @@ cuál le toca la CPU.
 ⭐ = aparece en las preguntas ejemplo del primer parcial (parcial: 2026-09-30).
 
 #### Procesos
-1. [[Procesos]] ⭐ — programa en ejecución con su propio espacio de direcciones; diferencia con programa
+1. [[Process]] ⭐ — programa en ejecución con su propio espacio de direcciones; diferencia con programa
 2. [[Stack]] — la región de memoria de llamadas y variables locales (text / data / heap / stack)
-3. [[Process Control Block]] — dónde guarda el SO el estado de un proceso que no está corriendo
-4. [[Estados de un proceso]] ⭐ — running, ready, blocked (+ new, terminated) y sus transiciones
+3. [[Process Control Block (PCB)]] — dónde guarda el SO el estado de un proceso que no está corriendo
+4. [[Process states]] ⭐ — running, ready, blocked (+ new, terminated) y sus transiciones
 5. [[Fork]] ⭐ — crear un proceso copiando al padre; qué imprime `value` después del fork
 6. [[Exec]] ⭐ — reemplazar la imagen del proceso; por qué no retorna si tiene éxito
-7. [[Process termination]] ⭐ — `exit()`, error, error fatal, matado por otro
+7. [[Process Termination]] ⭐ — `exit()`, error, error fatal, matado por otro
 8. [[Cambio de contexto]] ⭐ — cómo se inicia; voluntario vs involuntario
-9. [[CPU-bound and I-O-bound]] ⭐ — qué tipo de proceso tiene más cambios de contexto de cada clase
+9. [[CPU-bound and I-O bound]] ⭐ — qué tipo de proceso tiene más cambios de contexto de cada clase
 
 #### Hilos
 10. [[Thread]] ⭐ — qué es propio del hilo (registros, PC, stack, estado) y qué comparte el proceso
@@ -39,7 +39,7 @@ cuál le toca la CPU.
 
 #### Región crítica
 14. [[Race condition]] ⭐ — resultado depende del orden de ejecución; "siempre / a veces / nunca"
-15. [[Critical section]] ⭐ — el pedazo de código que toca datos compartidos
+15. [[Region critica]] ⭐ — el pedazo de código que toca datos compartidos
 16. [[Mutual exclusion]] ⭐ — que nunca haya dos adentro de la critical section
 17. [[Busy waiting]] ⭐ — esperar girando en un loop; vs bloquearse
 18. [[Disabling interrupts]] ⭐ — exclusión mutua apagando interrupciones y sus inconvenientes
