@@ -1,0 +1,42 @@
+{
+  "relationshipTypes": [
+    {
+      "name": "requiere",
+      "color": "#f5a97f",
+      "symmetric": false,
+      "pair": false,
+      "treeLayout": false,
+      "lineStyle": "dashed",
+      "genealogy": false,
+      "group": ""
+    },
+    {
+      "name": "habilita",
+      "color": "#8af491",
+      "symmetric": false,
+      "pair": false,
+      "treeLayout": false,
+      "lineStyle": "solid",
+      "genealogy": false,
+      "group": ""
+    }
+  ],
+  "imageProperty": "npcimage",
+  "folderScopes": [],
+  "requiredTags": [],
+  "showLegend": true,
+  "layout": "dagre",
+  "disabledTypes": [],
+  "showNodeLabels": true,
+  "localGraphDepth": 1,
+  "animateLayout": true,
+  "ringColorProperty": "",
+  "ringColorRules": [],
+  "topLeftIconProperty": "",
+  "topRightIconProperty": "",
+  "bottomLeftIconProperty": "",
+  "bottomRightIconProperty": "",
+  "subtextProperty": "",
+  "lockedLayouts": {},
+  "edgeLabels": {}
+}

@@ -1,7 +1,10 @@
 ---
 requiere:
-habilita:
   - "[[Mutual exclusion]]"
+habilita:
+  - "[[Lock variable]]"
+  - "[[Strict alternation]]"
+  - "[[Test-and-set]]"
 creado: 2026-09-28
 ---
 Toda solución de `=[[Mutual exclusion]]` necesita que un hilo *espere* cuando la región crítica está ocupada. Hay dos formas de esperar:

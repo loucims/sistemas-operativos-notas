@@ -1,8 +1,9 @@
 ---
 requiere:
-  - "[[Kernel]]"
-habilita:
+  - "[[Interrupt]]"
   - "[[Mutual exclusion]]"
+habilita:
+  - "[[Semaphore]]"
 creado: 2026-09-28
 ---
 #### Qué problema resuelve

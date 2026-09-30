@@ -1,7 +1,8 @@
 ---
-requiere: []
+requiere:
+  - "[[Busy waiting]]"
 habilita:
-  - "[[Mutual exclusion]]"
+  - "[[Peterson's solution]]"
 creado: 2026-09-28
 ---
 *Cumple Mutual exclusion, rompe progreso.*

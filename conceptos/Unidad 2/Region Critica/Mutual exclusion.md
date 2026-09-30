@@ -1,10 +1,10 @@
 ---
 requiere:
   - "[[Region critica]]"
-  - "[[Busy waiting]]"
 habilita:
+  - "[[Busy waiting]]"
   - "[[Disabling interrupts]]"
-  - "[[Lock variable]]"
+  - "[[Sleep and wakeup]]"
 creado: 2026-09-27
 ---
 Es el principal objetivo de una solucion de region critica: *garantizar que nunca haya dos hilos adentro de la misma región crítica al mismo tiempo*.

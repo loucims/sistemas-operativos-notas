@@ -1,7 +1,8 @@
 ---
 requiere:
   - "[[Thread]]"
-habilita: []
+habilita:
+  - "[[Region critica]]"
 creado: 2026-09-27
 ---
 Los hilos **comparten** las globales y el heap. Es la forma más fácil de comunicarse: uno escribe y el otro lee. Pero ahí aparece el problema: **si dos hilos tocan el mismo dato al mismo tiempo, el resultado puede salir mal.**

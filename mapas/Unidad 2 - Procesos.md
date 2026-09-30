@@ -6,7 +6,7 @@ estado: en-progreso
 creado: 2026-09-21
 tags: [procesos, concurrencia, cpu]
 ---
-
+ 
 # Unidad 2 - Procesos
 
 ## De qué va esta unidad
@@ -69,7 +69,7 @@ cuál le toca la CPU.
 38. [[Shortest Job First]] ⭐ — SJF, óptimo en tiempo medio de espera
 39. [[Shortest Remaining Time Next]] — SRTN, la versión expropiativa de SJF
 40. [[Round Robin]] ⭐ — turno circular; el tamaño del quantum
-41. [[Priority scheduling]] ⭐ — colas por prioridad para no recorrer toda la ready queue
+41. [[Priority Scheduling]] ⭐ — colas por prioridad para no recorrer toda la ready queue
 42. [[Real-time scheduling]] ⭐ — procesos periódicos; ¿es planificable? (∑ C/P ≤ 1)
 
 ## Conexiones con otras unidades

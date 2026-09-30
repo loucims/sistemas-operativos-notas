@@ -1,7 +1,8 @@
 ---
-requiere: []
+requiere:
+  - "[[Busy waiting]]"
 habilita:
-  - "[[Mutual exclusion]]"
+  - "[[Test-and-set]]"
 creado: 2026-09-28
 ---
 `=[[Disabling interrupts]]` no sirve en modo usuario ni con varias CPUs. Entonces surge la idea más natural de todas, **por software**: *una variable compartida que diga si la región crítica está ocupada.*

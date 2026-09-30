@@ -2,8 +2,6 @@
 requiere:
   - "[[Test-and-set]]"
 habilita:
-  - "[[Mutual exclusion]]"
-  - "[[Mutex]]"
 creado: 2026-09-29
 ---
 `Test-and-set` resuelve la mutual exclusion, pero es tosca: **siempre escribe 1**. Solo sirve para armar un lock, y con un lock, si el hilo que lo tiene pierde la CPU a mitad de la región crítica, todos los demás quedan esperando.
@@ -59,7 +57,6 @@ Ojo: a pesar del nombre, **no usa CAS directamente**. Usa otra instrucción ató
 __sync_fetch_and_add(&shared_var_ptr->x, 1);   // x++ atómico, en una sola instrucción
 ```
 Padre e hijo (con memoria compartida en xv6) suman 100 millones de veces cada uno, sin lock, y el resultado da exacto. Para un contador, fetch-and-add es lo más simple. CAS es más general: sirve para **cualquier** operación (`x * 2`, quedarse con el máximo, meter un elemento en una lista…).
-
 
 #### Con qué se confunde
 - **CAS vs TSL**:

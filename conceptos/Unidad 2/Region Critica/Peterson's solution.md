@@ -1,7 +1,7 @@
 ---
-requiere: []
+requiere:
+  - "[[Strict alternation]]"
 habilita:
-  - "[[Mutual exclusion]]"
 creado: 2026-09-29
 ---
 Strict alternation cumple mutual exclusion, pero viola progreso: si le toca al otro y el otro no quiere entrar, *igual te quedás esperando.* Lo que le falta es saber si el *otro quiere entrar o no.*
@@ -81,7 +81,7 @@ Para que **los dos** pasen el `while`, cada uno necesita que su condición sea f
 
 | Requisito                     | ¿Cumple?                                                                                                                      |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| [[Mutual exclusion]]          | ✅ (el argumento de arriba)                                                                                                    |
+| `=[[Mutual exclusion]]`       | ✅ (el argumento de arriba)                                                                                                    |
 | Progreso                      | ✅ (caso 1: si el otro no quiere, entrás)                                                                                      |
 | Espera limitada               | ✅ (si P0 sale y quiere volver a entrar, se pone `turn = 0`: queda como "último" y le cede el paso a P1, que estaba esperando) |
 | Sin suposiciones de velocidad | ✅                                                                                                                             |

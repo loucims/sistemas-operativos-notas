@@ -2,7 +2,8 @@
 requiere:
   - "[[Lock variable]]"
 habilita:
-  - "[[Mutual exclusion]]"
+  - "[[Compare-and-swap]]"
+  - "[[Mutex]]"
 creado: 2026-09-29
 ---
 #### Qué problema resuelve
@@ -72,16 +73,15 @@ Es exactamente el patrón de arriba. `test_and_set()` es el TSL, y `memory_order
 
 #### Evaluación
 
-|Requisito|¿Cumple?|
-|---|---|
-|Mutual exclusion|✅ Solo uno puede recibir 0|
-|Progreso|✅ Si está libre, entrás|
-|Espera limitada|❌ **No garantizada**: no hay orden de llegada. Cuando se libera, entra el primero que haga TSL, y un hilo con mala suerte podría perder siempre|
-|Cualquier número de hilos/CPUs|✅ A diferencia de Peterson|
+| Requisito                      | ¿Cumple?                                                                                                                                        |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mutual exclusion               | ✅ Solo uno puede recibir 0                                                                                                                      |
+| Progreso                       | ✅ Si está libre, entrás                                                                                                                         |
+| Espera limitada                | ❌ **No garantizada**: no hay orden de llegada. Cuando se libera, entra el primero que haga TSL, y un hilo con mala suerte podría perder siempre |
+| Cualquier número de hilos/CPUs | ✅ A diferencia de Peterson                                                                                                                      |
 
 Y sigue con los problemas de `Busy waiting`: gasta CPU girando, y la priority inversion.
 
 #### Con qué se confunde
-
 - **TSL ≠ Disabling interrupts**: TSL no apaga nada. Solo hace que **una** instrucción sea indivisible y bloquea el bus durante esa instrucción.
 - **TSL es la instrucción, no el lock**: el lock es la variable más el `while`. Un spinlock "de verdad" es justamente una lock variable que usa TSL para el "mirar y marcar".
