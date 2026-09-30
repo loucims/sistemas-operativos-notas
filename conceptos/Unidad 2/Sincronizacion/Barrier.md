@@ -1,3 +1,9 @@
+---
+requiere:
+  - "[[Semaphore]]"
+habilita: []
+creado: 2026-09-30
+---
 ⚠️ **No confundir** con las **barreras de memoria** (_memory barriers / fences_) de la slide U2_3, las de Peterson y `incrementar.cpp`. Mismo nombre, cosas distintas:
 
 |            | Memory barrier                               | Barrier (este concepto)                    |

@@ -1,8 +1,10 @@
 ---
 requiere:
   - "[[Resource acquisition]]"
+  - "[[Dining philosophers problem]]"
 habilita:
   - "[[Deadlock conditions]]"
+  - "[[Livelock]]"
 creado: 2026-09-30
 ---
 #### Qué problema resuelve

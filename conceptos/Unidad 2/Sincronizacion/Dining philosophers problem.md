@@ -1,8 +1,17 @@
+---
+requiere:
+  - "[[Semaphore]]"
+habilita:
+  - "[[Starvation]]"
+  - "[[Asignacion jerarquica]]"
+  - "[[Deadlock]]"
+creado: 2026-09-30
+---
 #### Qué problema es (slide U3_1, "Los filósofos cenando")
 
 Cinco filósofos alrededor de una mesa redonda. Cada uno tiene un plato de espaguetis, y entre cada par de platos hay **un tenedor**: 5 tenedores en total. Se pasan la vida **pensando** o **comiendo**, y para comer necesitan **los dos tenedores**, el de su izquierda y el de su derecha.
 ![[Dining philosophers.excalidraw|500]]
-> *Filósofo* i usa el tenedor i  y el (i+1) % 5 
+> *Filósofo* i usa el tenedor i  y el (i+1) % 5 (*Primero el `i`, luego el `(i+1)%5`*)
 #### Qué es `% 5`
 `%` es el **resto de la división**. `(i + 1) % 5` quiere decir "el siguiente, pero después del 4 volvé al 0":
 

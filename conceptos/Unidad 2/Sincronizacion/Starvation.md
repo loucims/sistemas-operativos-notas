@@ -25,11 +25,12 @@ Es exactamente la violación del requisito 3 de `Region critica`: **espera limit
 Siempre hay una **regla de elección** que puede favorecer a **otros** una y otra vez, y que **no tiene memoria de cuánto esperaste**: "el de más prioridad", "el más corto", "el lector si ya hay lectores", "el primero que llegue al TSL".
 #### Cómo se evita
 
-| Técnica                      | Idea                                                                        | Ejemplo                                                                                                  |
-| ---------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Orden FIFO**               | Atender por orden de llegada                                                | La fila de un semáforo, que despierta al que espera hace más tiempo                                      |
-| **Aging** (_envejecimiento_) | Cuanto más esperás, **más prioridad** tenés. Tarde o temprano pasás a todos | Slide U2_5, "Ajustes de prioridad": _"aumentar la prioridad de los procesos que no se están ejecutando"_ |
-| **Límite**                   | Después de N veces seguidas, el favorecido **tiene que ceder**              | Readers-writers: si hay un escritor esperando, no dejar entrar más lectores nuevos                       |
+| Técnica                              | Idea                                                                                                     | Ejemplo                                                                                                  |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Orden FIFO**                       | Atender por orden de llegada                                                                             | La fila de un semáforo, que despierta al que espera hace más tiempo                                      |
+| **Aging** (_envejecimiento_)         | Cuanto más esperás, **más prioridad** tenés. Tarde o temprano pasás a todos                              | Slide U2_5, "Ajustes de prioridad": _"aumentar la prioridad de los procesos que no se están ejecutando"_ |
+| **Límite**                           | Después de N veces seguidas, el favorecido **tiene que ceder**                                           | Readers-writers: si hay un escritor esperando, no dejar entrar más lectores nuevos                       |
+| **Contas las veces que fue victima** | Meter en el costo cuántas veces ya la eligieron. Cuantas más, más cara, hasta que deja de ser la elegida | Recovery de deadlocks. Es una forma de aging                                                             |
 #### Deadlock vs livelock vs starvation
 
 |                       | **Deadlock**                                       | **Livelock**                                    | **Starvation**                                  |

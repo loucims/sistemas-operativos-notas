@@ -1,5 +1,6 @@
 ---
-requiere: []
+requiere:
+  - "[[Producer-consumer problem]]"
 habilita: []
 creado: 2026-09-29
 ---

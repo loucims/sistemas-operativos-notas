@@ -6,6 +6,9 @@ habilita:
   - "[[Mutex]]"
   - "[[Monitor]]"
   - "[[Readers-writers problem]]"
+  - "[[Message passing]]"
+  - "[[Dining philosophers problem]]"
+  - "[[Barrier]]"
 creado: 2026-09-29
 ---
 `Sleep and wakeup` tenía dos fallas:

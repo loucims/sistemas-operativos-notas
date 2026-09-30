@@ -3,6 +3,7 @@ requiere:
   - "[[Sleep and wakeup]]"
 habilita:
   - "[[Semaphore]]"
+  - "[[Message passing]]"
 creado: 2026-09-29
 ---
 #### Qué problema es

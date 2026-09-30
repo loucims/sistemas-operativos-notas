@@ -18,7 +18,9 @@ Con 2 procesos ves el deadlock a ojo. Con 50 procesos y 30 resources, no. Hace f
    (A) ──▶ [S]      A está BLOQUEADO esperando S
 ```
 
-![[Resource alloation graph - A y B.excalidraw|900]]
+> Son *fotos de un instante* dentro del sistema. Es un **instante de transicion**.
+
+![[Resource allocation graph - A y B.excalidraw|900]]
 
 #### La regla (p.13)
 
